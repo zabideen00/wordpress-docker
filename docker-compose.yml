@@ -5,6 +5,8 @@ services:
     image: wordpress
     container_name: wordpress
     restart: unless-stopped
+    env_file:
+      - .env
     environment:
       - WORDPRESS_DB_HOST=mariadb:3306
       - WORDPRESS_DB_USER=root
@@ -23,6 +25,8 @@ services:
     image: mariadb
     container_name: mariadb
     restart: unless-stopped
+    env_file:
+      - .env
     environment:
       - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
       - MARIADB_DATABASE=${MARIADB_DATABASE}
