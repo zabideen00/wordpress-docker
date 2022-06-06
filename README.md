@@ -5,8 +5,11 @@
 First create a `.env` file in the root of the project and pass following environment variables
 
 ```MARIADB_PASSWORD=secret-password```
+
 ```MARIADB_USER=wordpress```
+
 ```MARIADB_DATABASE=wordpress```
+
 ```MARIADB_ROOT_PASSWORD=super-secret-password```
  
  ## Start wordpress docker
